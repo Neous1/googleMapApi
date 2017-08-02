@@ -10,6 +10,16 @@ function initMap() {
             lat: 40.7413549,
             lng: -73.99802439999996
         },
-        zoom: 8
+        zoom: 17
     });
+    //specific point on the map
+    var tribeca = {
+        lat:40.719526, 
+        lng: -74.0089934
+    };
+    var marker = new google.maps.Marker({
+        position: tribeca,
+        map: map,
+        title: "First Marker!"
+    })
 }
