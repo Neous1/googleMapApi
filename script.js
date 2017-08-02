@@ -10,7 +10,7 @@ function initMap() {
             lat: 40.7413549,
             lng: -73.99802439999996
         },
-        zoom: 17
+        zoom: 10
     });
     //specific point on the map
     var tribeca = {
@@ -21,5 +21,11 @@ function initMap() {
         position: tribeca,
         map: map,
         title: "First Marker!"
-    })
+    });
+    var infowindow = new google.maps.InfoWindow({
+        content: "Do you ever fell like an InfoWindw , floating through the wind, " + "ready to start again?"
+    });
+    marker.addListener('click', function(){
+        infowindow.open(map, marker);
+    });
 }
