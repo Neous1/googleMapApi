@@ -10,15 +10,28 @@ API Course, Lesson 1 -->
 
     <title>Google Map API</title>
     <script src="script.js"></script>
+    <!-- content of keys.js file is
+        var urlTag="<script async defer src='https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&v=3&callback=initMap'></script>"
+    -->
     <script src="keys.js"></script>
 </head>
 
 <body>
+    <div class="container">
+        <div class="options-box">
+            <h1>Find your NYC Home</h1>
+            <div>
+                <input id="show-listings" type="button" value="Show Listings">
+                <input id="hide-listings" type="button" value="Hide Listings">
+            </div>
+        </div>
+        
+    </div>
     <!-- TODO 1: Create a place to put the map in the HTML-->
     <div id="map"></div>
 
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC3J4-Oug3gUaUWT1wa9yYEymhm-iSKRc&v=3&callback=initMap">
+    <script>
+        document.write(urlTag);
     </script>
 </body>
 
