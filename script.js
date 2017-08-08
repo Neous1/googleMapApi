@@ -82,6 +82,8 @@ function initMap() {
         });
         // bounds.extend(markers[i].position);
     }
+    document.getElementById("show-listings").addEventListener("click", showListings);
+    document.getElementById("hide-listings").addEventListener("click", hideListings);
     
 }
 //this function populates the infowindow when th emakrer is clicked. We'll only allow one infowindow which will open at the marker that is clicked , an pupulate based on that marker's position.
@@ -103,7 +105,7 @@ function showListings(){
     //Extend the boundaries of hte map for each marker adn display the arker
     for (var i=0; i<markers.length; i++){
         markers[i].setMap(map);
-        bouds.extend(marker[i].position);
+        bounds.extend(markers[i].position);
     }
     map.fitBounds(bounds);
 }
